@@ -1,0 +1,30 @@
+import * as bsicons from "react-icons/bs";
+import * as fcicons from "react-icons/fc";
+import * as giicons from "react-icons/gi";
+import * as ioicons from "react-icons/io";
+import * as mdicons from "react-icons/md";
+import * as luicons from "react-icons/lu"
+
+export default function Icon({ name, ...props }) {
+  let IconComponent = null;
+
+  if (name.startsWith("Bs")) {
+    IconComponent = bsicons[name];
+  } else if (name.startsWith("Fc")) {
+    IconComponent = fcicons[name];
+  } else if (name.startsWith("Gi")) {
+    IconComponent = giicons[name];
+  } else if (name.startsWith("Io")) {
+    IconComponent = ioicons[name];
+  } else if (name.startsWith("Md")) {
+    IconComponent = mdicons[name];
+  } else if (name.startsWith("Lu")) {
+    IconComponent = luicons[name];
+  }
+
+  if (!IconComponent) {
+    return <span>❓</span>; // fallback
+  }
+
+  return <IconComponent {...props} />;
+}
