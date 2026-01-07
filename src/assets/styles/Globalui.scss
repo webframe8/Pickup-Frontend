@@ -1,0 +1,246 @@
+@import "Global";
+
+// image icon style
+
+.image-icon {
+  width: 40px;
+  height: fit-content;
+  box-sizing: border-box;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+//custom Image style
+
+.custom-image {
+  width: auto;
+  height: 100%;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+// inpout style
+.input {
+  width: 100%;
+  padding: 10px;
+  font-family: $Roboto-Font;
+  border: 1px solid $muted-text;
+  box-sizing: border-box;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+//form fields style
+.Form-field {
+  width: 100%;
+  height: fit-content;
+  box-sizing: border-box;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+//button style
+.Button {
+  width: 100%;
+  cursor: pointer;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 500;
+  font-family: $Roboto-Font;
+  margin: 10px 0px;
+
+  &:active {
+    transform: translateY(5px);
+  }
+}
+
+.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+
+  &:active,
+  &:focus {
+    transform: none;
+  }
+}
+
+//smart login style
+.smartlogin_layout {
+  width: 100% !important;
+  height: fit-content;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.subtitle {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 0px;
+  align-items: flex-end;
+
+  span {
+    width: calc(100% / 3);
+    border: 1px solid $muted-text;
+  }
+
+  small {
+    font-weight: 500;
+  }
+}
+
+.smartlink-card {
+  width: 100%;
+  height: fit-content;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.smart-login-option {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  gap: 5px;
+
+  svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  small {
+    font-weight: 500;
+    font-style: 13px;
+  }
+}
+
+// alert styling
+.Alert-box {
+  width: 100%;
+  height: fit-content;
+  box-sizing: border-box;
+  position: fixed;
+  padding: 20px;
+  transition: 0.5s linear;
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.main-box {
+  width: fit-content;
+  min-width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 15px;
+  border-radius: 7px;
+  padding: 15px;
+  box-shadow: 2px 2px 5px $border;
+  overflow: hidden;
+  background-color: $dark-card;
+  max-width: 400px;
+  transform: translateX(400px);
+  opacity: 0;
+  transition: transform 0.6s ease, opacity 0.6s ease;
+
+  &::after {
+    content: "";
+    bottom: 0px;
+    width: 100%;
+    height: 5px;
+    position: absolute;
+    left: 0px;
+    animation: load 5s linear 0s 1 forwards reverse;
+    transform-origin: left;
+  }
+
+  p {
+    margin: 0px;
+    color: $secondary-text;
+  }
+
+  svg {
+    width: 30px;
+    height: 30px;
+    color: inherit;
+  }
+}
+
+.main-box.open {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.main-box.closing {
+  transform: translateX(400px);
+  opacity: 0;
+}
+
+.error {
+  color: $error;
+
+  &::after {
+    background-color: $error;
+  }
+}
+
+.success {
+  color: $success;
+
+  &::after {
+    background-color: $success;
+  }
+}
+
+.warning {
+  color: $warning;
+
+  &::after {
+    background-color: $warning;
+  }
+}
+
+.info {
+  color: $info;
+
+  &::after {
+    background-color: $info;
+  }
+}
+
+//loader style
+
+.loader {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  z-index: 200;
+  background-color: #0000005f;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 5px;
+    border-radius: 10px;
+    animation: load 3s linear 0s 1 forwards;
+    transform-origin: left;
+  }
+}
+
+@keyframes load {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}

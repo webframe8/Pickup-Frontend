@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght,XOPQ,XTRA,YOPQ,YTDE,YTFI,YTLC,YTUC@8..144,100..1000,96,468,79,-203,738,514,712&display=swap");
+
+$primary: #fb5246; // text background or animation color
+$secondary: #3f6acd; // buttons borders
+$accentPrimary: #ffdd55; // gradient color
+$accentSecondary: #c837ab; // gradient and button or icon
+$DHF: #111A1F;
+
+$light-background: #ffffff; // light background color
+$dark-background: #0c1014; // dark background color
+$light-card: #fbf0f0; // light background card color
+$dark-card: #323232; // dark background card color
+
+$border: #f0dde2; // button or card border
+
+$light-primary-text: #2b2b2b; // light background text color
+$dark-primary-text: #f1f1f1; // dark background or any deep color background text color
+$secondary-text: #7a7a7a; // general lighter text color
+$muted-text: #a0a0a0bf; // disabled or broken color
+
+$Roboto-Font: "Roboto Flex", sans-serif; // font
+
+$success:  #22C55E;
+$warning:  #F59E0B;
+$error:    #EF4444;
+$info:     #38BDF8;
+
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: $Roboto-Font;
+}

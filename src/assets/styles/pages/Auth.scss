@@ -1,0 +1,126 @@
+@import '../Global';
+
+#Auth{
+    width: 100%;
+    height: fit-content;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+
+    section{
+        width: calc(100% / 2);
+        height: fit-content;
+        overflow: hidden;
+    }
+}
+
+.login-image_layout{
+    max-height: 100vh; min-height: 100vh;
+    padding: 40px;
+    box-sizing: border-box;
+    background-color: $dark-background;
+    color: $dark-primary-text;
+    border-right: 3px solid $secondary;
+    h2{
+        font-weight: 500;
+        font-size: 2.3rem;
+        text-align: center;
+        margin-inline: 2em;
+        line-height: 3.5rem;
+        margin-block: 0.5em;
+    }
+}
+
+.login-image{
+    width: 60%;
+    height: fit-content;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto auto;
+}
+
+
+.form_layout{
+    padding: 55px;
+    padding-top: 130px !important;
+    box-sizing: border-box;
+    overflow: hidden;
+    min-height: 100vh;
+    max-height: 100vh;
+    background-color: $DHF;
+    color: $dark-primary-text;
+}
+
+#Form{
+    width: 100%;
+    height: fit-content;
+    box-sizing: border-box;
+    overflow: hidden;
+
+    h2{
+        font-size: 1.2rem;
+        margin: 20px 0px 0px 0px;
+    }
+
+}
+
+.input-group{
+    margin-bottom: 10px;
+
+    input{
+        padding: 15px 20px;
+        font-size: 15px;
+        font-weight: 500;
+        background-color: transparent;
+        color: inherit;
+        outline: none;
+    }
+}
+
+.form-button{
+    padding: 15px;
+    border-radius: 30px;
+    color: $dark-primary-text;
+    background-color: $secondary;
+}
+
+.form_links{
+    width: 100%;
+    height: fit-content;
+    text-align: center;
+    margin-top: 5px;
+
+    a{
+        text-decoration: none;
+        color: inherit;
+        width: 100%;
+        padding: 15px;
+        border-radius: 30px;
+        display: flex;
+        box-sizing: border-box;
+        overflow: hidden;
+        justify-content: center;
+        font-weight: 500;
+        font-size: 15px;
+
+        &:hover{
+            background-color: $muted-text;
+        }
+    }
+}
+
+.slink{
+    margin-bottom: 10px;
+    width: 100%;
+    height: fit-content;
+    padding: 12px;
+    border: 1px solid $muted-text;
+    box-sizing: border-box;
+    overflow: hidden;
+    border-radius: 30px;
+}

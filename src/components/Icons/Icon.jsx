@@ -4,8 +4,15 @@ import * as giicons from "react-icons/gi";
 import * as ioicons from "react-icons/io";
 import * as mdicons from "react-icons/md";
 import * as luicons from "react-icons/lu"
+import React from "react";
 
-export default function Icon({ name, ...props }) {
+/**
+ * @param {object} props
+ * @param {React.CSSProperties} [props.style]
+ * @returns 
+ */
+
+export default function Icon({ name, style, ...props }) {
   let IconComponent = null;
 
   if (name.startsWith("Bs")) {
@@ -26,5 +33,5 @@ export default function Icon({ name, ...props }) {
     return <span>❓</span>; // fallback
   }
 
-  return <IconComponent {...props} />;
+  return <IconComponent style={{ ...style}} {...props} />;
 }
